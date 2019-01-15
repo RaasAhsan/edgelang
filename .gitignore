@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# IDEA
+*.iml
+.idea
+
+# Kotlin
+build
+out
+lib
+
+# Gradle
+.gradle/
+
+
+# Generated code
+src/main/java
