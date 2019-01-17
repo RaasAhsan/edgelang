@@ -1,4 +1,4 @@
-package javascript
+package compiler.javascript
 
 /*
  * It is not necessary to define a complete and exhaustive AST of ECMAScript 2015.
