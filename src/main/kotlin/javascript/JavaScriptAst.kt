@@ -3,7 +3,7 @@ package javascript
 /*
  * It is not necessary to define a complete and exhaustive AST of ECMAScript 2015.
  * A subset of JavaScript is valid JavaScript.
- * Therefore it is sufficient to define the subset of the JavaScript required
+ * Therefore it is sufficient to define only the subset of the JavaScript required
  * to compile Edgelang to JavaScript in a lossless fashion.
  */
 
@@ -29,6 +29,8 @@ data class ReturnNode(val expr : ExpressionNode) : StatementNode()
 
 sealed class ExpressionNode
 
+data class NameNode(val name : String) : ExpressionNode()
+
 data class AddNode(val lhs: ExpressionNode, val rhs: ExpressionNode) : ExpressionNode()
 
 data class SubtractNode(val lhs : ExpressionNode, val rhs : ExpressionNode) : ExpressionNode()
@@ -45,6 +47,7 @@ data class BooleanNode(val value : Boolean) : ExpressionNode()
 
 data class AnonymousFunctionNode(val args : List<String>, val body : Block) : ExpressionNode()
 
+// TODO: Can name be more general
 data class FunctionInvocation(val name : String, val args : List<String>) : ExpressionNode()
 
 // TODO: Anonymous function invocation? e.g. (function(){})()
