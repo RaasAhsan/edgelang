@@ -13,6 +13,5 @@ lib
 # Gradle
 .gradle/
 
-
 # Generated code
 src/main/java
