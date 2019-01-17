@@ -1,4 +1,4 @@
-package compiler.javascript
+package codegen.javascript
 
 /*
  * It is not necessary to define a complete and exhaustive AST of ECMAScript 2015.
